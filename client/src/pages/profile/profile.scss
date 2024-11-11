@@ -1,0 +1,163 @@
+// Variables for theme colors
+$primary-color: #4a90e2;
+$secondary-color: #f5f7fa;
+$text-color: #333;
+$accent-color: #2b80d6;
+$border-radius: 8px;
+
+.profile-page {
+  display: flex;
+  flex-direction: column; // Stack sections vertically
+  align-items: center;
+  min-height: 100vh;
+  background-color: $secondary-color;
+  justify-content: center;
+}
+
+.profile {
+  display: flex; // Use flex for horizontal layout
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+  .welcome-section {
+    flex: 1; // Welcome section takes less space
+    display: flex;
+    flex-direction: column; // Stack elements vertically
+    justify-content: center; // Center content vertically
+    padding: 2rem;
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .role-badge {
+      background-color: $accent-color;
+      color: #fff;
+      padding: 0.3rem 0.6rem;
+      border-radius: $border-radius;
+      font-size: 0.9rem;
+      width: 50px;
+      margin-bottom: 10px;
+      opacity: 0.8;
+     
+    }
+  }
+
+  .profile-details {
+    // border: 2px solid red;
+    flex: 1; // Profile details take more space
+    display: flex;
+    flex-direction: column; // Stack elements vertically
+    align-items: center; // Align items to the start
+    padding-left: 2rem; // Space between profile details and welcome section
+    border-radius: $border-radius;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    .profile-picture-container {
+      margin-bottom: 1rem; // Space below picture
+    }
+
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid $primary-color;
+    }
+
+    .profile-info {
+      width: 100%;
+      max-width: 500px;
+    //  border: 2px solid blue;
+     padding-left: 330px;
+      p {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+
+        strong {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .tutor-details, .student-details {
+      margin-top: 2rem; // Space above these sections
+
+      p {
+        font-size: 1rem;
+
+        strong {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.edit-profile-btn {
+  margin-top: 1rem; // Space above the button
+  background-color: $accent-color;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($accent-color, 10%);
+  }
+}
+
+.gigs-section, .student-section {
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto; // Centered below the profile
+  text-align: left;
+
+  h2 {
+    font-size: 1.5rem;
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+
+  .gig-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1.2rem;
+      color: $text-color;
+    }
+
+    p {
+      margin: 0.3rem 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column; // Stack vertically on smaller screens
+    align-items: center;
+
+    .welcome-section {
+      width: 100%; // Full width on small screens
+    }
+
+    .profile-details {
+      width: 100%; // Full width on small screens
+      padding-left: 0; // Remove padding on small screens
+    }
+  }
+}

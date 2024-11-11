@@ -1,0 +1,225 @@
+.message {
+  display: flex;
+  justify-content: center;
+  background-color: #f4f7fc;
+  min-height: 100vh;
+  flex-direction: column;
+
+  .container {
+    width: 100%;
+    max-width: 800px; /* Ensure it's not too wide on large screens */
+    margin: 20px auto; /* Center the container */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    position: relative;
+
+    .breadcrumbs {
+      font-weight: 300;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+
+      .header-img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .sender-details {
+        display: flex;
+        flex-direction: column;
+
+        .sender-name {
+          font-weight: 600;
+          font-size: 16px;
+          color: #333;
+        }
+
+        .sender-username {
+          font-size: 14px;
+          color: #888;
+        }
+      }
+    }
+
+    .messages {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
+      max-height: 500px; /* Fix the height so it doesn’t grow */
+      overflow-y: auto; /* Make sure the chat scrolls */
+      margin-bottom: 20px; /* Space for the message input box */
+      flex-grow: 1;  /* Allow this section to take available space */
+      padding-bottom: 60px;  /* Space for the fixed input box */
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 16px;
+
+        &.owner {
+          flex-direction: row-reverse;
+          align-self: flex-end;
+
+          p {
+            background-color: royalblue;
+            color: white;
+            border-radius: 20px 0px 20px 20px;
+          }
+        }
+
+        img.profile-img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        p {
+          padding: 12px 18px;
+          background-color: #f0f0f0;
+          border-radius: 20px;
+          max-width: 75%;
+          word-wrap: break-word;
+        }
+      }
+    }
+
+    .write {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      position: sticky;  /* Keep it fixed to the bottom of the container */
+      bottom: 20px;  /* Push it to the bottom */
+      left: 20px;
+      right: 20px;
+      background-color: white;  /* To cover content when scrolling */
+      padding-top: 10px;
+      z-index: 10;  /* Ensure the input box stays above the messages */
+      padding-bottom: 10px;
+
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+        resize: none;
+        outline: none;
+        background-color: #fafafa;
+        max-width: calc(100% - 100px); /* Ensure button doesn't overlap */
+      }
+
+      button {
+        padding: 12px 18px;
+        background-color: #1dbf73;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100px;
+
+        &:hover {
+          background-color: #17a15e;
+        }
+      }
+    }
+  }
+}
+
+// Responsiveness for smaller screens
+@media (max-width: 1024px) {
+  .message {
+    .container {
+      width: 90%; /* Make it responsive on tablets and smaller screens */
+      max-width: 700px;
+    }
+
+    .messages {
+      max-height: 400px;
+    }
+
+    .write {
+      flex-direction: column;
+      gap: 10px;
+
+      textarea {
+        width: 100%;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+      }
+    }
+  }
+}
+
+// Responsiveness for mobile screens
+@media (max-width: 768px) {
+  .message {
+    .container {
+      width: 100%;
+      margin: 10px;
+    }
+
+    .messages {
+      padding: 10px;
+    }
+
+    .write {
+      flex-direction: column;
+      gap: 10px;
+
+      textarea {
+        width: 100%;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+      }
+    }
+  }
+}
+
+// Responsiveness for very small mobile screens (portrait)
+@media (max-width: 480px) {
+  .message {
+    .container {
+      padding: 10px;
+    }
+
+    .messages {
+      gap: 10px;
+    }
+
+    .write {
+      gap: 5px;
+
+      button {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+.pay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+  
+    .pay-container {
+      width: 100%;
+      max-width: 800px;
+      background-color: #ffffff;
+      box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .header {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+  
+    .order-summary {
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+  
+      .order-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+  
+      .order-details {
+        font-size: 16px;
+        color: #555;
+      }
+    }
+  
+    .stripe-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  
+      .StripeElement {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+        color: #333;
+        transition: border-color 0.3s;
+  
+        &:focus {
+          border-color: #1dbf73;
+        }
+      }
+  
+      .button {
+        background-color: #1dbf73;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #17a15e;
+        }
+  
+        &:disabled {
+          background-color: #d3d3d3;
+          cursor: not-allowed;
+        }
+      }
+  
+      .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+  
+      .loading-message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: #333;
+        margin-top: 20px;
+      }
+  
+      .success-message,
+      .error-message {
+        text-align: center;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 20px;
+        color: white;
+      }
+  
+      .success-message {
+        background-color: #28a745;
+      }
+  
+      .error-message {
+        background-color: #dc3545;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .pay-container {
+        padding: 20px;
+        gap: 20px;
+      }
+  
+      .header {
+        font-size: 24px;
+      }
+  
+      .order-summary {
+        padding: 15px;
+      }
+  
+      .stripe-form {
+        gap: 15px;
+      }
+  
+      #submit{
+        padding: 14px;
+      }
+    }
+  }
+  

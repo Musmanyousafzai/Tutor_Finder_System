@@ -1,0 +1,47 @@
+.catCards {
+  width: 100%;
+  height: 344px;
+  color: white;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+ 
+
+ 
+.catCard{
+  
+ height: 100%;
+  width: 95%;
+  
+ 
+}
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+  }
+
+  .desc {
+    color: black;
+    font-weight: 300;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+
+  .title {
+    color: black;
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    font-size:24px;
+    font-weight: 500;
+    background-color: rgba(168, 201, 225, 0.87);
+    border: 1px solid rgba(168, 201, 225, 0.87);  
+    border-radius: 5px;
+    
+    
+  }
+}
+

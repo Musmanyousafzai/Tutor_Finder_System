@@ -1,0 +1,153 @@
+.orders {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f4f7fa;
+  color: #555;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+      h1 {
+        font-size: 32px;
+        color: #333;
+        font-weight: 600;
+      }
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        margin-bottom: 20px;
+
+        th,
+        td {
+          padding: 12px 15px; /* Adjust padding to fit the content properly */
+          vertical-align: middle;
+          text-align: left;
+          font-size: 16px;
+          border-bottom: 1px solid #ddd;
+        }
+
+        th {
+          background-color: #f0f5f5;
+          font-weight: bold;
+          text-align: center; /* Center the header text */
+        }
+
+        td {
+          text-align: center;
+        }
+
+        tr {
+          height: auto; /* Let rows adjust to content height */
+        }
+
+        tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+
+        .image {
+          width: 50px;
+          height: 50px; /* Control the image size */
+          object-fit: cover;
+          border-radius: 8px;
+          
+          
+
+        }
+
+        .message {
+         display: block;
+        
+          width: 25px;
+          min-height: 1px;
+          cursor: pointer;
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+  .loading,
+  .error {
+    text-align: center;
+    font-size: 20px;
+    color: #ff4d4f;
+    font-weight: bold;
+  }
+
+  // Media Queries for Responsiveness
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+
+    .title h1 {
+      font-size: 28px;
+    }
+
+    table {
+      font-size: 14px;
+
+      th,
+      td {
+        padding: 10px 12px;
+      }
+
+      .image {
+        width: 45px;
+        height: 45px;
+      }
+
+      .message {
+        width: 22px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 15px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+    }
+
+    table {
+      font-size: 12px;
+
+      th,
+      td {
+        padding: 8px 10px;
+      }
+
+      .image {
+        width: 40px;
+        height: 40px;
+      }
+
+      .message {
+        width: 18px;
+      }
+    }
+  }
+}

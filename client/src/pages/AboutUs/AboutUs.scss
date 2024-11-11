@@ -1,0 +1,131 @@
+/* src/styles/AboutUs.scss */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+  
+    .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+  
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    nav ul li {
+      margin-left: 20px;
+    }
+  
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+  }
+  
+  .about-us {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  
+    .about-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+  
+    .features {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+  
+      .feature-item {
+        text-align: center;
+        width: 22%;
+  
+        i {
+          font-size: 3em;
+          color: #333;
+        }
+  
+        h4 {
+          margin-top: 10px;
+        }
+      }
+    }
+  
+    .team {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+  
+      .team-member {
+        text-align: center;
+        width: 30%;
+  
+        img {
+          width: 100%;
+          border-radius: 50%;
+          margin-bottom: 10px;
+        }
+  
+        h4 {
+          font-size: 1.2em;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .features {
+      flex-direction: column;
+      align-items: center;
+  
+      .feature-item {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+    }
+  
+    .team {
+      flex-direction: column;
+      align-items: center;
+  
+      .team-member {
+        width: 80%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  
